@@ -1,0 +1,116 @@
+html {
+  background-color: rgb(255,255,255);
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin:50px;
+    font-family: "Monospace 821 W01","Courier New","DejaVu Sans Mono",monospace,sans-serif;
+    background-color: rgb(255,255,255);
+    color: rgb(250, 244, 244);
+  }
+  
+  h6, p {
+    margin: 0 0 1em 0;
+    color: #000;
+  }
+
+  a {
+    text-decoration: underline;
+    color: #308abc;
+  }
+
+  #MainImg img {
+    padding: 50px;
+    margin: 20px;
+    border-radius: 50%;
+}
+  
+  .wrapper {
+    max-width: 1040px;
+    margin: 0 20px;
+    display: grid;
+    grid-gap: 20px;
+  }
+
+  .blogwrapper {
+    max-width: 1040px;
+    margin: 0 20px;
+    display: grid;
+    grid-gap: 20px;
+  }
+  
+  @media screen and (min-width: 500px) {
+  
+    .sidebar {
+      float: left;
+    }
+  
+    .content {
+      float: right;
+      width: 79.7872%;
+      text-align: justify;
+    }
+  
+    .wrapper {
+      margin: 0 auto;
+      grid-template-columns: 1fr 3fr;
+    }
+    
+    .header {
+      border-bottom: 2px solid #000;
+      font-size: 2.57rem;
+      text-decoration: blue; 
+      grid-column: 1 / -1;
+      /* needed for the floated layout */
+      clear: both;
+    }
+  
+  .wrapper, .blogwrapper > * {
+    background-color: rgb(255,255,255);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 12px;
+    margin-bottom: 10px;
+  }
+  
+  
+.box1 {
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+  color: #000;
+  font-size: 1.07rem;
+  /* font-style: italic; */
+}
+
+
+.navLinks {
+		display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    border-bottom: 2px solid #000;
+    text-align: center;
+    font-weight: bolder;
+	}
+
+  /* We need to set the widths used on floated items back to auto, and remove the bottom margin as when we have grid we have gaps. */
+  @supports (display: grid) {
+    .wrapper, .blogwrapper > * {
+      width: auto;
+      margin: 0;
+    }
+  }
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 50%;
+}
